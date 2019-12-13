@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Routes</h1>
+  <table>
+    <tr>
+      <th>Route</th>
+      <th>Distance</th>
+    </tr>
+    <tr *ngFor="let route of routes">
+      <td>
+        <a [routerLink]="['/route-update', route.id]">
+          {{ route.planet1.name }} to
+          {{ route.planet2.name }}
+        </a>
+      </td>
+      <td>
+        {{ route.distance }}
+      </td>
+    </tr>
+  </table>
+  <button (click)="create()">Create</button>
+</div>

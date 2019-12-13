@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Planets</h1>
+  <ul>
+    <li *ngFor="let planet of planets">
+      <a [routerLink]="['/planet-update', planet.id]">
+        {{ planet.name }}
+      </a>
+    </li>
+  </ul>
+  <button (click)="create()">Create</button>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Planet</h1>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="planet.name" class="form-control" />
+  </div>
+  <button (click)="update()">Update</button>
+  <button (click)="delete()">Delete</button>
+  <button (click)="cancel()">Cancel</button>
+</div>
