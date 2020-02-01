@@ -10,7 +10,7 @@ import { Planet } from "../planet";
 })
 export class PlanetCreateComponent implements OnInit {
 
-  private planet: Planet = null;
+  private planet: Planet = new Planet();
 
   constructor(
     private router: Router,
