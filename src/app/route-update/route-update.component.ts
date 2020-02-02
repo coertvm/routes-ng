@@ -31,8 +31,8 @@ export class RouteUpdateComponent implements OnInit {
           this.routesService.readOne(params.get('id'))
             .subscribe((route: Route) => {
               this.route = route;
-              this.route.planet1 = this.planets.find(planet => planet.id === this.route.planet1.id);
-              this.route.planet2 = this.planets.find(planet => planet.id === this.route.planet2.id);
+              this.route.from = this.planets.find(planet => planet.id === this.route.from.id);
+              this.route.to = this.planets.find(planet => planet.id === this.route.to.id);
             });
         });
     });

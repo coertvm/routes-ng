@@ -8,8 +8,8 @@
     <tr *ngFor="let route of routes">
       <td>
         <a [routerLink]="['/route-update', route.id]">
-          {{ route.planet1.name }} to
-          {{ route.planet2.name }}
+          {{ route.from.name }} to
+          {{ route.to.name }}
         </a>
       </td>
       <td>
