@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Shortest Route</h1>
+  <div class="form-group">
+    <label for="from">From:</label>
+    <select id="from" [(ngModel)]="route.from" class="form-control">
+      <option *ngFor="let planet of planets" [ngValue]="planet">
+        {{ planet.name }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="to">To:</label>
+    <select id="to" [(ngModel)]="route.to" class="form-control">
+      <option *ngFor="let planet of planets" [ngValue]="planet">
+        {{ planet.name }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="distance">Distance:</label>
+    <input id="distance" [(ngModel)]="route.distance" class="form-control" />
+  </div>
+  <button (click)="find()">Find</button>
+  <table>
+    <tr>
+      <th>Route</th>
+      <th>Distance</th>
+    </tr>
+    <tr *ngFor="let route of routes">
+      <td>
+        <a>
+          {{ route.from.name }} to
+          {{ route.to.name }}
+        </a>
+      </td>
+      <td>
+        {{ route.distance }}
+      </td>
+    </tr>
+  </table>
+</div>

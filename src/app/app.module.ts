@@ -12,6 +12,7 @@ import { PlanetListComponent } from './planet-list/planet-list.component';
 import { RouteCreateComponent } from './route-create/route-create.component';
 import { RouteUpdateComponent } from './route-update/route-update.component';
 import { RouteListComponent } from './route-list/route-list.component';
+import { ShortestRouteComponent } from './shortest-route/shortest-route.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouteListComponent } from './route-list/route-list.component';
     PlanetListComponent,
     RouteCreateComponent,
     RouteUpdateComponent,
-    RouteListComponent
+    RouteListComponent,
+    ShortestRouteComponent
   ],
   imports: [
     BrowserModule,
